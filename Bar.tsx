@@ -2,7 +2,7 @@ export default function Bar({
   percentActive,
   total,
   background,
-  suffix = "testés",
+  suffix = "analyserade",
   text,
   color,
   logo,

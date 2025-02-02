@@ -59,17 +59,8 @@ export default function PerParty({ entries, blueskyEntries }) {
 
   return (
     <div>
-      <p style={{ textAlign: "center", color: "#980c0c" }}>
-        La dernière analyse X est en cours au 20 janvier 2025 : nous avons testé{" "}
-        {entries.length} députés grâce aux données{" "}
-        <a href="https://datan.fr">datan</a> améliorées.
-      </p>
-      <p style={{ textAlign: "center", color: "darkBlue" }}>
-        Concernant Bluesky, nous prenons le premier compte trouvé avec la
-        recherche "prénom nom".
-      </p>
       <h3 style={{ margin: "2rem 0 1rem", ...centerStyle }}>
-        Décompte par groupe parlementaire
+        Antal konton per riksdagsgrupp
       </h3>
       <ul
         style={{ listStyleType: "none", maxWidth: "50rem", margin: "0 auto" }}
@@ -139,7 +130,7 @@ export default function PerParty({ entries, blueskyEntries }) {
                   <Bar
                     {...{
                       percentActive: (count / firstPartyCount) * 100,
-                      text: `${count} députés`,
+                      text: `${count} ledamöter`,
                       background: "#eee",
                       color: "#333",
                     }}

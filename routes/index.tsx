@@ -41,14 +41,14 @@ export default function Home() {
         </h1>
       </header>
       <p style={{ maxWidth: '40rem', margin: '0 auto' }}>
-        Découvrez qui sont les <em>politix</em>, ces élus de la République
+        Här kan du se vilka <em>politiXer</em> är fortfarande
         <br />
-        <Em background={xColor}>qui sont actifs sur X</Em> dans les {daysSpan}{' '}
-        derniers jours.
+        <Em background={xColor}>aktiva på X</Em> under de senaste {daysSpan}{' '}
+        dagarna.
       </p>
       <p style={{ maxWidth: '40rem', margin: '0 auto' }}>
-        Découvrez aussi ceux{' '}
-        <Em background={blueskyBlue}>qui sont actifs sur Bluesky</Em>.
+        Du kan också se vilka är {' '}
+        <Em background={blueskyBlue}>aktiva på Bluesky</Em>.
       </p>
       <p
         style={{
@@ -79,12 +79,12 @@ export default function Home() {
             />
 
             <a
-              href="https://github.com/laem/politix"
+              href="https://github.com/PierreMesure/politix"
               style={{
                 textDecoration: 'none',
               }}
             >
-              Code source
+              Källkod
             </a>
           </span>
           <span>
@@ -95,7 +95,7 @@ export default function Home() {
                 textDecoration: 'none',
               }}
             >
-              Par Maël
+              Av Maël
             </a>
           </span>
           <span>
@@ -175,9 +175,8 @@ const Li = ({ href, text }) => (
   </li>
 )
 const menuEntries = [
-  ['gouvernement', 'Le gouvernement'],
-  ['parlement', 'Le parlement'],
-  ['fr', 'Le top des comptes Bluesky 🇫🇷'],
+  ['gouvernement', '🏢 Regeringen'],
+  ['parlement', '🏛️ Riksdagen'],
 ]
 
 const Em = ({ background, children }) => (

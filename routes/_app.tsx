@@ -7,10 +7,10 @@ export default function App({ Component }: PageProps) {
       <Head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>PolitiX - Quels députés sont actifs sur X et Bluesky ?</title>
+        <title>PolitiX - Vilka riksdagsledamöter är aktiva på X och Bluesky?</title>
         <meta
           name="description"
-          content="Politix analyse automatiquement l'activité des députés sur X (Twitter) et sur Bluesky"
+          content="PolitiX analyserar våra politikers aktivitet på X och Bluesky"
           key="description"
         />
         <meta

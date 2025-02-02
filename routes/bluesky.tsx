@@ -51,8 +51,8 @@ export default function Bluesky() {
                   <BlueskyHandle député={député} invert={false} />
                   <div>
                     {(activité && hasRecentTweets(activité, analyseDate))
-                      ? "Actif"
-                      : "Non actif"}
+                      ? "Aktiv"
+                      : "Ej aktiv"}
                   </div>
                 </li>
               )

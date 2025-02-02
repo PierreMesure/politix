@@ -24,15 +24,15 @@ const filteredDéputés = (party) =>
 export default function Results({ givenParty = null }) {
   return (
     <section>
-      <h2 style={{ ...centerStyle, marginTop: "1rem" }}>Les députés</h2>
+      <h2 style={{ ...centerStyle, marginTop: "1rem" }}>Riksdagsledamöterna</h2>
       {!givenParty &&
         <PerParty entries={entries} blueskyEntries={blueskyEntries} />}
 
       <h3 style={centerStyle}>
-        {givenParty ? `Liste pour le parti ${givenParty}` : `Liste complète`}
+        {givenParty ? `Lista för partiet ${givenParty}` : `Alla riksdagsledamöter`}
       </h3>
       <a href="/bluesky" style={{ "float": "right", marginRight: "1rem" }}>
-        Voir les députés sur Bluesky
+        Se riksdagsledamöterna på Bluesky
       </a>
       <ul
         style={politixGridStyle}
@@ -62,7 +62,7 @@ export default function Results({ givenParty = null }) {
               <PartyVignette party={groupeAbrev} small={true} />
               <div>
                 <small style={{ color: "#f1a8b7" }}>
-                  X {twitter || ": non présent"}
+                  X {twitter || ": ej hittad"}
                 </small>
               </div>
               <div>
@@ -70,7 +70,7 @@ export default function Results({ givenParty = null }) {
                   ? (
                     <div>
                       <details>
-                        <summary>Actif sur X</summary>
+                        <summary>Aktiv på X</summary>
                         <ol>
                           {dates.map((date, i) => (
                             <li key={date + i}>{date}</li>
@@ -80,9 +80,9 @@ export default function Results({ givenParty = null }) {
                     </div>
                   )
                   : notTested
-                  ? "Non testé"
+                  ? "Ej testad"
                   : (
-                    "Non actif sur X"
+                    "Ej aktiv på X"
                   )}
               </div>
               <div>
@@ -93,7 +93,7 @@ export default function Results({ givenParty = null }) {
                         <BlueskyHandle député={député} />
                       </small>
                       <details>
-                        <summary>Actif sur Bluesky</summary>
+                        <summary>Aktiv på Bluesky</summary>
                         <ol>
                           {isActiveOnBluesky[1].activité.map((date, i) => (
                             <li key={date + i}>{date}</li>
@@ -102,7 +102,7 @@ export default function Results({ givenParty = null }) {
                       </details>
                     </div>
                   )
-                  : "Non actif sur Bluesky"}
+                  : "Ej aktiv på Bluesky"}
               </div>
             </li>
           )

@@ -9,9 +9,9 @@ import {
 import { hasRecentTweets } from "../../date-utils.ts"
 import top from "../../ministres.json" with { type: "json" }
 
-const title = "Nos ministres sont-ils sur X ?"
+const title = "Vilka ministrar finns på X?"
 const description =
-  `Analyse de l'activité des ministres de notre gouvernement sur le réseau social d'influence X de Musk, ainsi que sur Bluesky, l'alternative ouverte à X.`
+  `Analys av statsrådens aktivitet på X och Bluesky.`
 
 export default function Top() {
   return (
@@ -38,8 +38,7 @@ export default function Top() {
       </header>
       <p>{description}</p>
       <p>
-        Un ministre est actif quand il a publié un message dans les 7 derniers
-        jours.
+        En minister anses vara aktiv när hen har publicerat innehåll under de senaste 7 dagarna.
       </p>
       <br />
       <List />
@@ -89,7 +88,7 @@ const List = () => (
             </div>
             <div>
               <small style={{ color: "#f1a8b7" }}>
-                X {xAt || ": non présent"}
+                X {xAt || ": ej hittad"}
               </small>
             </div>
             <div>
@@ -97,7 +96,7 @@ const List = () => (
                 ? (
                   <div>
                     <details>
-                      <summary>Actif sur X</summary>
+                      <summary>Aktiv på X</summary>
                       <ol>
                         {xActivity.map((date, i) => (
                           <li key={date + i}>{date}</li>
@@ -107,7 +106,7 @@ const List = () => (
                   </div>
                 )
                 : (
-                  "Non actif sur X"
+                  "Ej aktiv på X"
                 )}
             </div>
             <div>
@@ -134,7 +133,7 @@ const List = () => (
                               width: "fit-content",
                             }}
                           >
-                            Actif sur Bluesky
+                            Aktiv på Bluesky
                           </summary>
                           <ol>
                             {bskyActivity.map((date, i) => (
@@ -143,7 +142,7 @@ const List = () => (
                           </ol>
                         </details>
                       )
-                      : "Non actif sur Bluesky"}
+                      : "Ej aktiv på Bluesky"}
                   </div>
                 )}
             </div>
